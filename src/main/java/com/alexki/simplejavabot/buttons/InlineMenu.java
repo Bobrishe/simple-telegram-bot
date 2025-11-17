@@ -28,9 +28,7 @@ public class InlineMenu implements ChatMenu {
 
         }
 
-        InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup(rows);
-
-        return inlineKeyboardMarkup;
+        return new InlineKeyboardMarkup(rows);
     }
 
 }

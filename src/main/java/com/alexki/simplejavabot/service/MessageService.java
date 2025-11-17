@@ -43,10 +43,6 @@ public class MessageService {
         execute(createSendMessage(chatId, text));
     }
 
-    public void sendMessage(Message message) {
-        execute(createSendMessage(message));
-    }
-
     public void sendMessage(Message message, ReplyKeyboard markup) {
         SendMessage sendMessage = createSendMessage(message);
         sendMessage.setReplyMarkup(markup);
@@ -54,8 +50,10 @@ public class MessageService {
     }
 
     public void help(Long chatId) {
-        String helpCommands = "/start - to start work with a bot\n" +
-                              "/help - to get help menu\n";
+        String helpCommands = """
+                /start - to start work with a bot
+                /help - to get help menu
+                """;
 
         sendMessage(chatId, helpCommands);
     }
